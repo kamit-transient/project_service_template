@@ -1,16 +1,10 @@
-import { ClassConstructor } from "class-transformer";
-import { IValidation } from "../types/ivalidation.type";
+
 import { UnAuthenticatedException } from "../exceptions/Exception";
 import { Request } from 'express'
 import { jwtVerify, createRemoteJWKSet } from 'jose';
 import { logger } from "../logger/logger";
 import { extractBearerTokenFromHeaders } from "../utils/util";
 
-export interface IValidate {
-    body?: { schema: ClassConstructor<IValidation>; groups?: string[] },
-    query?: { schema: ClassConstructor<IValidation>; groups?: string[] },
-    param?: { schema: ClassConstructor<IValidation>; groups?: string[] }
-}
 
 
 function parseJwt(token: string) {
