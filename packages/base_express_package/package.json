@@ -1,0 +1,40 @@
+{
+  "name": "@kamit-transient/express_base_package",
+  "version": "1.1.1",
+  "description": "This package holds common usable typescript types for use in various other repos.",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamit-transient/project_service_template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamit-transient/project_service_template/issues"
+  },
+  "homepage": "https://github.com/kamit-transient/project_service_template#readme",
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "express": "^4.21.2",
+    "jose": "^5.9.6",
+    "reflect-metadata": "^0.2.2",
+    "tsoa": "^6.6.0",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

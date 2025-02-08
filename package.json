@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "lerna": "lerna"
+  },
+  "dependencies": {
+    "lerna": "^8.1.9"
+  }
+}

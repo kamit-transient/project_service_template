@@ -1,0 +1,19 @@
+# Logs
+logs
+
+# VSCode
+.vscode
+
+# TypeScript
+build
+
+# Node.js
+node_modules
+
+# Docker
+docker/build
+
+# Environment Variables
+.env
+
+.aider.*

@@ -1,0 +1,1373 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Record_string.any_": {
+				"properties": {},
+				"additionalProperties": {},
+				"type": "object",
+				"description": "Construct a type with a set of properties K of type T"
+			},
+			"UserEntity": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"deletedBy": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deletedAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"avatar": {
+						"type": "string"
+					},
+					"idpUserId": {
+						"type": "string"
+					},
+					"idpApplicationId": {
+						"type": "string"
+					},
+					"roles": {
+						"items": {
+							"properties": {},
+							"additionalProperties": {},
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"tenant": {
+						"$ref": "#/components/schemas/TenantEntity"
+					},
+					"comments": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"articles": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"id",
+					"createdBy",
+					"deletedBy",
+					"createdAt",
+					"updatedAt",
+					"deletedAt",
+					"name",
+					"email",
+					"avatar",
+					"idpUserId",
+					"idpApplicationId",
+					"roles",
+					"tenant",
+					"comments",
+					"articles"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TenantEntity": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"deletedBy": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deletedAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"name": {
+						"type": "string"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"idpOrgId": {
+						"type": "string"
+					},
+					"idpOrgName": {
+						"type": "string"
+					},
+					"isActive": {
+						"type": "boolean"
+					},
+					"commentSettings": {
+						"$ref": "#/components/schemas/Record_string.any_"
+					},
+					"scrapingSettings": {
+						"$ref": "#/components/schemas/Record_string.any_"
+					},
+					"articles": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"comments": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"users": {
+						"items": {
+							"$ref": "#/components/schemas/UserEntity"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"id",
+					"createdBy",
+					"deletedBy",
+					"createdAt",
+					"updatedAt",
+					"deletedAt",
+					"name",
+					"domain",
+					"idpOrgId",
+					"idpOrgName",
+					"isActive",
+					"commentSettings",
+					"scrapingSettings",
+					"articles",
+					"comments",
+					"users"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Partial_UserEntity_": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"avatar": {
+						"type": "string"
+					},
+					"idpUserId": {
+						"type": "string"
+					},
+					"idpApplicationId": {
+						"type": "string"
+					},
+					"roles": {
+						"items": {
+							"properties": {},
+							"additionalProperties": {},
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"tenant": {
+						"$ref": "#/components/schemas/TenantEntity"
+					},
+					"comments": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"articles": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"id": {
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"deletedBy": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updatedAt": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deletedAt": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"type": "object",
+				"description": "Make all properties in T optional"
+			},
+			"CreateTenantDto": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"domain": {
+						"type": "string"
+					},
+					"idpOrgId": {
+						"type": "string"
+					},
+					"idpOrgName": {
+						"type": "string"
+					},
+					"settings": {
+						"$ref": "#/components/schemas/Record_string.any_"
+					}
+				},
+				"required": [
+					"name",
+					"domain",
+					"idpOrgId",
+					"idpOrgName"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IPaginatedData_TenantEntity_": {
+				"properties": {
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/TenantEntity"
+						},
+						"type": "array"
+					},
+					"totalCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"currentPage": {
+						"type": "number",
+						"format": "double"
+					},
+					"pageSize": {
+						"type": "number",
+						"format": "double"
+					},
+					"totalPages": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"data",
+					"totalCount",
+					"currentPage",
+					"pageSize",
+					"totalPages"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ISettingType": {
+				"type": "string",
+				"enum": [
+					"comment",
+					"scraping"
+				]
+			},
+			"IResponse": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"status": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "number",
+								"format": "double"
+							}
+						]
+					}
+				},
+				"required": [
+					"message",
+					"status"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Role": {
+				"properties": {
+					"roles": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"projectGrantId": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"roles",
+					"projectGrantId",
+					"id"
+				],
+				"type": "object"
+			},
+			"ZitadelRoles": {
+				"properties": {},
+				"additionalProperties": {
+					"properties": {},
+					"additionalProperties": {
+						"type": "string"
+					},
+					"type": "object"
+				},
+				"type": "object"
+			},
+			"IUser": {
+				"properties": {
+					"amr": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"at_hash": {
+						"type": "string"
+					},
+					"aud": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"auth_time": {
+						"type": "number",
+						"format": "double"
+					},
+					"azp": {
+						"type": "string"
+					},
+					"client_id": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"email_verified": {
+						"type": "boolean"
+					},
+					"exp": {
+						"type": "number",
+						"format": "double"
+					},
+					"family_name": {
+						"type": "string"
+					},
+					"given_name": {
+						"type": "string"
+					},
+					"iat": {
+						"type": "number",
+						"format": "double"
+					},
+					"iss": {
+						"type": "string"
+					},
+					"locale": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"preferred_username": {
+						"type": "string"
+					},
+					"roles": {
+						"items": {
+							"$ref": "#/components/schemas/Role"
+						},
+						"type": "array"
+					},
+					"sid": {
+						"type": "string"
+					},
+					"sub": {
+						"type": "string"
+					},
+					"tenantId": {
+						"type": "string"
+					},
+					"tenantName": {
+						"type": "string"
+					},
+					"updated_at": {
+						"type": "number",
+						"format": "double"
+					},
+					"urn:zitadel:iam:org:id": {
+						"type": "string"
+					},
+					"urn:zitadel:iam:org:project:296901278829641731:roles": {
+						"$ref": "#/components/schemas/ZitadelRoles"
+					},
+					"urn:zitadel:iam:org:project:roles": {
+						"$ref": "#/components/schemas/ZitadelRoles"
+					},
+					"urn:zitadel:iam:user:resourceowner:id": {
+						"type": "string"
+					},
+					"urn:zitadel:iam:user:resourceowner:name": {
+						"type": "string"
+					},
+					"urn:zitadel:iam:user:resourceowner:primary_domain": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"amr",
+					"at_hash",
+					"aud",
+					"auth_time",
+					"azp",
+					"client_id",
+					"email",
+					"email_verified",
+					"exp",
+					"family_name",
+					"given_name",
+					"iat",
+					"iss",
+					"locale",
+					"name",
+					"preferred_username",
+					"roles",
+					"sid",
+					"sub",
+					"tenantId",
+					"tenantName",
+					"updated_at",
+					"urn:zitadel:iam:org:id",
+					"urn:zitadel:iam:org:project:296901278829641731:roles",
+					"urn:zitadel:iam:org:project:roles",
+					"urn:zitadel:iam:user:resourceowner:id",
+					"urn:zitadel:iam:user:resourceowner:name",
+					"urn:zitadel:iam:user:resourceowner:primary_domain"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"HealthCheckResponse": {
+				"properties": {
+					"status": {
+						"type": "string"
+					},
+					"timestamp": {
+						"type": "number",
+						"format": "double"
+					},
+					"uptime": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"status",
+					"timestamp",
+					"uptime"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"bearerAuth": {
+				"type": "http",
+				"in": "header",
+				"name": "Authorization",
+				"description": "Berer token to access these api",
+				"scheme": "bearer",
+				"bearerFormat": "JWT "
+			}
+		}
+	},
+	"info": {
+		"title": "project_central_backend_api",
+		"version": "1.0.0",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Amit Kumar ",
+			"email": "hey.amit@outlook.com"
+		}
+	},
+	"paths": {
+		"/users": {
+			"get": {
+				"operationId": "GetUsers",
+				"responses": {
+					"200": {
+						"description": "A list of UserEntity objects.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/UserEntity"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves all users with pagination support.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The page number to retrieve.",
+						"in": "query",
+						"name": "page",
+						"required": false,
+						"schema": {
+							"default": 1,
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"description": "The number of users per page.",
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"default": 10,
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateUser",
+				"responses": {
+					"200": {
+						"description": "The newly created UserEntity object.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/UserEntity"
+								}
+							}
+						}
+					}
+				},
+				"description": "Creates a new user.",
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"description": "The user data to create.",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Partial_UserEntity_",
+								"description": "The user data to create."
+							}
+						}
+					}
+				}
+			}
+		},
+		"/users/{id}": {
+			"get": {
+				"operationId": "GetUser",
+				"responses": {
+					"200": {
+						"description": "A UserEntity object or undefined if the user is not found.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/UserEntity"
+								}
+							}
+						}
+					}
+				},
+				"description": "Gets a user by ID.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user to retrieve.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "UpdateUser",
+				"responses": {
+					"200": {
+						"description": "The updated UserEntity object.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/UserEntity"
+								}
+							}
+						}
+					}
+				},
+				"description": "Updates a user by ID.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user to update.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"description": "The user data to update.",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Partial_UserEntity_",
+								"description": "The user data to update."
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteUser",
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"description": "Deletes a user by ID.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user to delete.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/users/{id}/comments": {
+			"get": {
+				"operationId": "GetUserComments",
+				"responses": {
+					"200": {
+						"description": "A list of comments for the user.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Gets a user's comments.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/users/{id}/comments/{commentId}": {
+			"get": {
+				"operationId": "GetUserCommentById",
+				"responses": {
+					"200": {
+						"description": "A comment for the user or undefined if the comment is not found.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"description": "Gets a user's comment by ID.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The ID of the comment to retrieve.",
+						"in": "path",
+						"name": "commentId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/users/{id}/articles": {
+			"get": {
+				"operationId": "GetUserArticles",
+				"responses": {
+					"200": {
+						"description": "A list of articles for the user.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Gets a user's articles.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/users/{id}/articles/{articleId}": {
+			"get": {
+				"operationId": "GetUserArticleById",
+				"responses": {
+					"200": {
+						"description": "An article for the user or undefined if the article is not found.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"description": "Gets a user's article by ID.",
+				"security": [],
+				"parameters": [
+					{
+						"description": "The ID of the user.",
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The ID of the article to retrieve.",
+						"in": "path",
+						"name": "articleId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenants": {
+			"post": {
+				"operationId": "CreateTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/TenantEntity"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTenantDto"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "GetTenants",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IPaginatedData_TenantEntity_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "page",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "pageSize",
+						"required": false,
+						"schema": {
+							"default": 25,
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenants/{tenantId}": {
+			"get": {
+				"operationId": "GetTenantById",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/TenantEntity"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "UpdateTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/TenantEntity"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateTenantDto"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteTenant",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/tenants/{tenantId}/settings": {
+			"get": {
+				"operationId": "GetTenantSettingsById",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/Record_string.any_"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "settingType",
+						"required": true,
+						"schema": {
+							"$ref": "#/components/schemas/ISettingType"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateTenantSettingKey",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"allOf": [
+										{
+											"$ref": "#/components/schemas/TenantEntity"
+										}
+									],
+									"nullable": true
+								}
+							}
+						}
+					}
+				},
+				"description": "Add new setting or update existing setting.",
+				"tags": [
+					"tenants"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "tenantId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "settingType",
+						"required": true,
+						"schema": {
+							"$ref": "#/components/schemas/ISettingType"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Record_string.any_"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/events/accept-user-signup-and-update": {
+			"post": {
+				"operationId": "UserSignupAndUserUpdateEventPublisher",
+				"responses": {
+					"200": {
+						"description": "A boolean indicating success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "- The response object for error handling",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"403": {
+						"description": "- The response object for error handling",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"description": "Handles user signup and update events from Casdoor.",
+				"summary": "Save user signed up with Casdoor to the comment DB.",
+				"tags": [
+					"events"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "- The internal service secret header",
+						"in": "header",
+						"name": "x-internal-service",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"description": "- The user signup or update payload",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"description": "- The user signup or update payload"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/auth/login": {
+			"get": {
+				"operationId": "LoginUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"auth"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "scope",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"enum": [
+								"openid",
+								"profile",
+								"email",
+								"address",
+								"phone"
+							]
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/auth/callback": {
+			"get": {
+				"operationId": "OauthCallback",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"auth"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "code",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/auth/{userId}": {
+			"get": {
+				"operationId": "GetUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IUser"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"auth"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "userId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "name",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/api/v1/health": {
+			"get": {
+				"operationId": "GetHealth",
+				"responses": {
+					"200": {
+						"description": "Health check information",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/HealthCheckResponse"
+								}
+							}
+						}
+					}
+				},
+				"description": "Performs a health check of the service",
+				"tags": [
+					"health"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
