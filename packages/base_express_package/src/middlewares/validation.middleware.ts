@@ -1,7 +1,7 @@
 import { ClassConstructor, plainToInstance } from "class-transformer";
 import { IValidation } from "../types/ivalidation.type";
 import { NextFunction } from "express";
-import { AppException, BadRequestError } from "../exceptions/Exception";
+import { AppException } from "../exceptions/Exception";
 import { Response, Request } from 'express'
 import { validateSync } from "class-validator";
 import { logger } from "../logger/logger";
