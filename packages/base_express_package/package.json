@@ -2,9 +2,12 @@
   "name": "@kamit-transient/express_base_package",
   "version": "1.1.8",
   "description": "This package holds common usable typescript types for use in various other repos.",
-  "main": "./src/index.ts",
+  "main": "./build/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ts": "tsc-watch src/server.ts",
+    "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
+    "build": "npm run tsoa && tsc",
+    "clean": "rm -rf build src/swagger"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -35,6 +38,7 @@
     "concurrently": "^9.1.2",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.1",
     "typescript": "^5.7.2"
   }
 }

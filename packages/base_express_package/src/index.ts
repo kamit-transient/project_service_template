@@ -13,3 +13,5 @@ export { IValidate, validationMiddleware } from "./middlewares/validation.middle
 export { checkAuthorization } from "./middlewares/authrisation.middleware"
 export * as baseConstant from "./utils/constant"
 export * as baseUtil from "./utils/util"
+
+console.log("Hello hi")
