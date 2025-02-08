@@ -1,6 +1,6 @@
 {
   "name": "@kamit-transient/express_base_package",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "This package holds common usable typescript types for use in various other repos.",
   "main": "./src/index.ts",
   "scripts": {
