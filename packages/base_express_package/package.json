@@ -2,7 +2,7 @@
   "name": "@kamit-transient/express_base_package",
   "version": "1.1.9",
   "description": "This package holds common usable typescript types for use in various other repos.",
-  "main": "./build/index.ts",
+  "main": "./build/index.js",
   "scripts": {
     "ts": "tsc-watch src/server.ts",
     "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
