@@ -1,4 +1,4 @@
-(function(h,T){typeof exports=="object"&&typeof module<"u"?T(exports,require("react")):typeof define=="function"&&define.amd?define(["exports","react"],T):(h=typeof globalThis<"u"?globalThis:h||self,T(h["@kamit-transient/base_react_package"]={},h.React))})(this,function(h,T){"use strict";var W={exports:{}},x={};/**
+(function(h,T){typeof exports=="object"&&typeof module<"u"?T(exports,require("react")):typeof define=="function"&&define.amd?define(["exports","react"],T):(h=typeof globalThis<"u"?globalThis:h||self,T(h.base_react_package={},h.React))})(this,function(h,T){"use strict";var W={exports:{}},x={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
