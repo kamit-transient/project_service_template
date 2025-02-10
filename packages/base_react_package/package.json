@@ -1,6 +1,6 @@
 {
   "name": "@kamit-transient/base_react_package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/shared-components.umd.js",
   "module": "dist/shared-components.es.js",
   "types": "dist/types/index.d.ts",
