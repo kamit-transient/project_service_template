@@ -182,8 +182,8 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./comp
 
 
 // EXPORT PAGES
-export * as AuthCallback from "./pages/callback";
-export * as Login from "./pages/login";
+export { AuthCallback } from "./pages/callback";
+export { Login } from "./pages/login";
 
 // export utils
 export * as CONSTANTS from "./utils/app.constants";

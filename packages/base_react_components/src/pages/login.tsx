@@ -77,4 +77,4 @@ const Login = ({ searchParams, router }: { searchParams: any, router: any }) => 
     </Suspense>;
 };
 
-export default Login;
+export { Login };

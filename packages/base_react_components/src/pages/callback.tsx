@@ -78,4 +78,4 @@ const AuthCallback = ({ router, searchParams }: { router: any, searchParams: any
     );
 };
 
-export default AuthCallback;
+export { AuthCallback };
