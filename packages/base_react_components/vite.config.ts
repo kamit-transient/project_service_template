@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import dts from 'vite-plugin-dts';
+import path from "path";
 
 import { peerDependencies } from "./package.json";
 
@@ -15,6 +16,12 @@ export default defineConfig({
 
 
   ],
+  // copid below resolve block from shadcn-ui installation guide.
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'), //'./src/index.ts',
