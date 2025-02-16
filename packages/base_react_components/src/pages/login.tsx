@@ -6,7 +6,7 @@ import { LoaderCircleIcon } from "lucide-react";
 import { Button } from "../components/ui/button";
 
 
-const Login = ({ searchParams, router }: any) => {
+const Login = ({ searchParams, router }: { searchParams: any, router: any }) => {
     const buttonRef = useRef(null);
     // let searchParams = useSearchParams()
     let [isManualLoginButtonEnabled, setIsManualLoginButtonEnabled] = useState(false);
