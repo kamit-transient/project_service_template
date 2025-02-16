@@ -33,7 +33,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: Object.keys(peerDependencies),
-      output: { globals: { 'react': 'React', 'react-dom': 'ReactDOM', 'lucide-react': 'lucideReact' } }
+      output: { globals: { 'react': 'React', 'react-dom': 'ReactDOM', 'lucide-react': 'lucideReact', 'oidc-client-ts': 'oidcClientTs' } }
     }
   },
 })
