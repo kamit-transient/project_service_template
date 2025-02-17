@@ -44,4 +44,4 @@ const SignupPage = ({ searchParams, router }: { router: any, searchParams: any }
 
 }
 
-export default SignupPage;
+export { SignupPage };

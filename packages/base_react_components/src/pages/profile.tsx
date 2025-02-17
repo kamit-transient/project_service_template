@@ -4,7 +4,7 @@
 import { useAuth } from "../providers/auth.provider";
 
 
-export default function Profile() {
+export function Profile() {
 
     let { signOut, user: a } = useAuth();
 

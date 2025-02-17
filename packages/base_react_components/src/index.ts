@@ -185,6 +185,8 @@ export { TenantSelectorComponent } from "./components/tenantSelector.component"
 // EXPORT PAGES
 export { AuthCallback } from "./pages/callback";
 export { Login } from "./pages/login";
+export { SignupPage } from "./pages/signup"
+export { Profile } from "./pages/profile"
 
 // export utils
 export * as CONSTANTS from "./utils/app.constants";
@@ -221,3 +223,9 @@ export { BaseBackendApi } from './backend/Base.api'
 export { AppApi } from './backend/api'
 export { ApiError } from "./backend/api.error"
 export { TenantApiCalls } from "./backend/tenant.api"
+
+
+
+// routes
+
+export { ManageSession } from "./routes/manageSession"

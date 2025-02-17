@@ -89,6 +89,7 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.5.2",
+    "jose": "^5.9.6",
     "js-cookie": "^3.0.5",
     "react-day-picker": "^8.10.1",
     "react-hook-form": "^7.54.2",
