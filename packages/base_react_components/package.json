@@ -18,17 +18,21 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/react_components.es.js",
-      "require": "./dist/react_components.umd.js"
+      "import": "./dist/server-build.js",
+      "require": "./dist/server-build.cjs"
+    },
+    "./client": {
+      "import": "./dist/client-build.js",
+      "require": "./dist/client-build.cjs"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
     }
   },
-  "main": "./dist/react_components.umd.cjs",
-  "module": "./dist/react_components.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/server-build.cjs",
+  "module": "./dist/server-build.js",
+  "types": "./dist/types/server-build.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

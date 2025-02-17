@@ -13,7 +13,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
-    dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true, exclude: ["src/**/*.stories.*"] }), // Output .d.ts files
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      rollupTypes: true,
+      exclude: ["src/**/*.stories.*"],
+      insertTypesEntry: true, // Generates a `types` entry in `package.json`
+      outDir: 'dist/types', // Output directory for `.d.ts` files
+
+    }), // Output .d.ts files
     preserveDirectives() as Plugin,
 
   ],
@@ -25,11 +32,15 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'), //'./src/index.ts',
+      entry: {
+        "server-build": resolve(__dirname, 'src/index.ts'),
+        "client-build": resolve(__dirname, 'src/indexClient.ts'),
+      },
+
       name: 'react_components',
       // fileName: (format) => `react_components.${format}.js`,
-      fileName: 'react_components',
-      formats: ['es', 'cjs', 'umd'],
+      // fileName: 'react_components',
+      formats: ['es', 'cjs'],
       cssFileName: 'styles',
     },
     rollupOptions: {
