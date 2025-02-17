@@ -1,7 +1,7 @@
 import { logger } from "../lib/client.logger";
+import { ApiError } from "./api.error";
 import { appCache } from "../utils/cache";
-import Cookies from 'js-cookie'
-import { ApiError, ApiErrorType } from "./api.error";
+import { ApiErrorType } from "../types/common.type";
 
 
 
