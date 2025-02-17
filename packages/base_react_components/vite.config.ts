@@ -1,9 +1,10 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import dts from 'vite-plugin-dts';
 import path from "path";
+import preserveDirectives from 'rollup-preserve-directives';
 
 import { peerDependencies } from "./package.json";
 
@@ -13,7 +14,7 @@ export default defineConfig({
   plugins: [
     react(),
     dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true, exclude: ["src/**/*.stories.*"] }), // Output .d.ts files
-
+    preserveDirectives() as Plugin,
 
   ],
   // copid below resolve block from shadcn-ui installation guide.
