@@ -1,11 +1,21 @@
-# Developer notes
+# Hello
+
+# base_express_package
+This package can be used with any express.js or tsoa package.
+
+
+# base_react_components
+
+This package can be used with any react.js or next.js projects.
+
+## Developer notes
 
 This package has two entry points one for client components("use clients") and second for server side codes.
 
 Its critical to seperate them, if you do not in that case your code will be marked with "use client" in your final bundle under dist folder which will make your whole code client side and you will start to get weird erros like code x can not be used server side etc.
 
 
-# Consuming the packae.
+## Consuming the packae.
 
 Step 1: install the package 
 
