@@ -180,15 +180,16 @@ export {
 export { Toaster } from "./components/ui/toaster"
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./components/ui/tooltip"
 
-
+// components
+export { TenantSelectorComponent } from "./components/tenantSelector.component"
 // EXPORT PAGES
 export { AuthCallback } from "./pages/callback";
 export { Login } from "./pages/login";
 
 // export utils
 export * as CONSTANTS from "./utils/app.constants";
-export { type AuthContextType, AuthProvider, useAuth } from "./utils/auth.provider"
 export { getOidcClient } from "./utils/oidc-client";
+export { appCache } from "./utils/cache"
 
 
 // export lib
@@ -198,3 +199,25 @@ export { logger } from "./lib/client.logger";
 // export hooks
 export { useIsMobile } from "./hooks/use-mobile"
 export { useToast, toast } from "./hooks/use-toast";
+
+//providers
+export { type AuthContextType, AuthProvider, useAuth } from "./providers/auth.provider"
+export { TenantContextProvider, useTenant } from "./providers/tenant.provider"
+export { ThemeProvider } from "./providers/theme.provider"
+
+
+// types
+export { type PaginatedRecords, type ApiConfig, type ApiErrorType } from "./types/common.type"
+export { type IRequestStatus } from "./types/formStatus.type"
+export { type ITenant } from "./types/tenants.type"
+
+
+
+// schema
+export { createTenantSchema } from "./schema/tenants.schema"
+
+// backend api wrappers
+export { BaseBackendApi } from './backend/Base.api'
+export { AppApi } from './backend/api'
+export { ApiError } from "./backend/api.error"
+export { TenantApiCalls } from "./backend/tenant.api"

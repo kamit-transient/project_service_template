@@ -4,7 +4,7 @@ import { Suspense, useEffect } from "react";
 // import { useRouter, useSearchParams } from "next/navigation";
 import { getOidcClient } from "../utils/oidc-client";
 import { STORAGE_REDIRECT_PATH } from "../utils/app.constants";
-import { useAuth } from "../utils/auth.provider";
+import { useAuth } from "../providers/auth.provider";
 import { logger } from "../lib/client.logger";
 import { LoaderCircleIcon } from "lucide-react";
 import { useToast } from "../hooks/use-toast";

@@ -1,0 +1,1 @@
+export type IRequestStatus = 'idle' | 'inProgress' | 'success' | 'error';
