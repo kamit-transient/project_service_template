@@ -21,7 +21,13 @@ export class ApiError extends Error {
         this.errorType = options.errorType ?? ApiErrorType.UNKNOWN_ERROR;
         this.context = options.context;
         // Ensure proper stack trace
-        Error.captureStackTrace(this, this.constructor);
+        // Ensure proper stack trace
+        if (typeof Error.captureStackTrace === 'function') {
+            Error.captureStackTrace(this, this.constructor);
+        } else {
+            // Fallback for environments where Error.captureStackTrace is not available
+            this.stack = (new Error()).stack;
+        }
     }
 
     // Method to classify error based on status code
