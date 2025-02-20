@@ -10,5 +10,6 @@ export function parseInterval(input: string): { days?: number; hours?: number; m
         if (match[3]) result.minutes = parseInt(match[3], 10);
     }
 
+
     return result;
 }
