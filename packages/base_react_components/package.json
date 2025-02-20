@@ -1,6 +1,6 @@
 {
   "name": "@kamit-transient/react_components",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "type": "module",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
