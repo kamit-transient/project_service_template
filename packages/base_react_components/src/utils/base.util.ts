@@ -31,4 +31,5 @@ export function stringifyInterval(intervalObj: { days?: number; hours?: number; 
 
     // Join all parts with a space.
     return parts.join(" ");
+
 }
