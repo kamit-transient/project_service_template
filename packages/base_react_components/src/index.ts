@@ -4,7 +4,7 @@
 export * as CONSTANTS from "./utils/app.constants";
 export { getOidcClient } from "./utils/oidc-client";
 export { appCache } from "./utils/cache"
-
+export * as baseUtils from "./utils/base.util"
 
 // export lib
 

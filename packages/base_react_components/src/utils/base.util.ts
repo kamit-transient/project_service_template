@@ -1,4 +1,4 @@
-function parseInterval(input: string): { days?: number; hours?: number; minutes?: number } {
+export function parseInterval(input: string): { days?: number; hours?: number; minutes?: number } {
     const regex = /(?:(\d+)\s*day[s]?)|(?:(\d+)\s*hour[s]?)|(?:(\d+)\s*minute[s]?)/gi;
     const matches = [...input.matchAll(regex)];
 
