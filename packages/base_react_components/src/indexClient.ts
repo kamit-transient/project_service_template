@@ -180,6 +180,8 @@ export {
 export { Toaster } from "./components/ui/toaster"
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "./components/ui/tooltip"
 
+//lib
+export { cn } from "./lib/utils"
 
 // export hooks
 export { useIsMobile } from "./hooks/use-mobile"

@@ -8,3 +8,4 @@ export const STORAGE_REDIRECT_PATH = "comment_redirect_pathname"
 export const STORAGE_ACTIVE_TENANT_ID = "active_tenant_id"
 export const STORAGE_ACTIVE_TENANT_NAME = "active_tenant_name"
 export const ZITADEL_JWKS_URL = "ZITADEL_JWKS_URL";
+export const NO_VALUE = "NO_VALUE"
