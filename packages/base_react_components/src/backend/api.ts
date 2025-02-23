@@ -41,18 +41,26 @@ export class AppApi {
 
             // Handle non-successful responses
             if (!response.ok) {
-                const errorBody = await response.text();
+                let errorBody: any = {};
+                try {
+                    errorBody = await response.json();
+                } catch (e) {
+                    errorBody = await response.text();
+                }
                 const errorType = ApiError.classifyError(response.status);
 
-                const apiError = new ApiError(`Request failed: ${response.statusText}`, {
-                    statusCode: response.status,
-                    errorType,
-                    context: {
-                        url,
-                        method: requestMethod,
-                        responseBody: errorBody
-                    }
-                });
+                const apiError = new ApiError(
+                    `Request failed: ${response.statusText}`,
+                    {
+                        statusCode: response.status,
+                        errorType,
+                        message: errorBody?.message || response.statusText,
+                        context: {
+                            url,
+                            method: requestMethod,
+                            responseBody: errorBody
+                        }
+                    });
 
                 // Detailed error logging
                 logger.error('API Request Failed', {
@@ -102,4 +110,3 @@ export class AppApi {
 
 
 }
-

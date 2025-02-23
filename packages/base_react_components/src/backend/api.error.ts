@@ -6,13 +6,15 @@ export class ApiError extends Error {
     public readonly statusCode?: number;
     public readonly errorType: ApiErrorType;
     public readonly context?: Record<string, any>;
+    public readonly message: string;
 
     constructor(
         message: string,
         options: {
             statusCode?: number,
             errorType?: ApiErrorType,
-            context?: Record<string, any>
+            context?: Record<string, any>,
+            message?: string
         } = {}
     ) {
         super(message);
@@ -20,7 +22,7 @@ export class ApiError extends Error {
         this.statusCode = options.statusCode;
         this.errorType = options.errorType ?? ApiErrorType.UNKNOWN_ERROR;
         this.context = options.context;
-        // Ensure proper stack trace
+        this.message = options.message || message;
         // Ensure proper stack trace
         if (typeof Error.captureStackTrace === 'function') {
             Error.captureStackTrace(this, this.constructor);
